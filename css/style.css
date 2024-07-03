@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url(https://pohod-v-gory.com/wp-content/uploads/2022/09/trekking-v-svanetii-gruziya-bez-palatok_36-1024x768.jpg);
+    background-size: cover;
+    background-position: center center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.arrow-next {
+    font-size: 5em;
+    margin: 0;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    background: #008001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5em 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+.section1 {
+    background-color: 
+#008001;
+}
+
+.section2 {
+    background-color: 
+#008001;
+}
+
+.section3 {
+    background-color: 
+#008001;
+}
+
+nav {
+    width: 100vw;
+    padding: 1em 0 1em;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    width: fit-content;
+    padding: .5em;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: .5em;
+    color: white;
+    margin-right: 1em;
+    user-select: none;
+    cursor: pointer;
+}
+
+#team > h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: left;
+    width: 80vw;
+}
+
+.team-wrapper,
+.about-wrapper {
+    width: 80vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+#about > h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: left;
+    width: 80vw;
+}
+
+.about-wrapper {
+    flex-direction: column;
+}
+
+.about-wrapper p{
+    width: 100%;
+}
+
+.team-item {
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-item-top {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    border: 5px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.team1 .team-item-top {
+    background: url(https://mtourism.com.ua/images/Ekskursovody/Andrij.jpg);
+    background-size: cover;
+}
+
+.team2 .team-item-top {
+    background: url(https://mtourism.com.ua/images/Ekskursovody/Sasha2.jpg);
+    background-size: cover;
+}
+
+.team3 .team-item-top {
+    background: url(https://mtourism.com.ua/images/Ekskursovody/natalia-1.jpg);
+    background-size: cover;
+}
+
+.team-item-bottom h2 {
+    text-transform: uppercase;
+}
+
+.submit-wrapper {
+    width: 60vw;
+}
+
+.submit-wrapper > h1 {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: left;
+    width: 60vw;
+}
+
+.submit-form {
+    width: 100%;
+    display: flex;
+    border: 1px solid #008001;
+    border-bottom: none;
+    box-sizing: border-box;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 1em;
+}
+
+.submit-btn-row{
+    width: 100%;
+    display: flex;
+}
+
+.submit-btn {
+    width: 50%;
+    box-sizing: border-box;
+    background: #008001;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.submit-btn-calc {
+    border-bottom-left-radius: 5px;
+    padding: .5em;
+    border-right: .5px solid #008001;
+    border-left: 1px solid #008001;
+    border-bottom: 1px solid #008001;
+}
+
+.submit-btn-send {
+    border-bottom-right-radius: 5px;
+    padding: .5em;
+    border-left: .5px solid #008001;
+    border-right: 1px solid #008001;
+    border-bottom: 1px solid #008001;
+}
+
+.submit-form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.submit-input,
+.submit-select {
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    border: none;
+    padding: .5em;
+    border-bottom: 1px solid #008001;
+    font-size: 1.1em;
+}
+
+.submit-input:active,
+.submit-input:focus,
+.submit-select:active,
+.submit-select:focus {
+    border-bottom: 1px solid #008001;
+    outline: none;
+}
+
+.submit-select {
+    /* border: none; */
+    padding: calc(.5em - 1px);
+}
+
+.submit-input-label {
+    font-size: .7em;
+    margin: 0 0 1em 0;
+    padding-left: .7em;
+}
+
+.submit-input-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group {
+    width: calc(50% - 2px);
+    margin: 0;
+    padding: 0;
+}
+
+.row-item {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
