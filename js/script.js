@@ -8,36 +8,35 @@ async function getProducts() {
     return products
 };
 function getCardHTML(item){
-    return `div class="my-card" style="width: 18rem;>
-    <img src="img/${item.image}">
-    <h5 class="text-my-card">{item.title}</h5>
-    <p class="description-card"></p>
-    ${item.price}
-    </p>
-    <button type="bitton" class=" btn-secondary "
-                    data-product='${JSON.stringify(item)}
-    додати в кошик</button>
-    </div>
+    return `<div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.title}</h5>
+                        <p class="card-text">${item.description}</p>
+                        <h5>${item.price}$</h5>
+                    </div>
+                    <img src="img/${item.image}" class="card-img-bottom" alt="...">
+                </div>`
 
 
 }
 // Викликаємо асинхронну функцію та очікуємо на отримання продуктів
 getProducts().then(function (products) {
-    let productsList = document.querySelector('.products-list')
+    let productsList = document.querySelector('.tours')
+    productsList.innerHTML=''
     if (productsList) {
         products.forEach(function (product) {
             // Відображаємо товари на сторінці
             productsList.innerHTML += getCardHTML(product)
         })
     }
-    // Отримуємо всі кнопки "Купити" на сторінці
-    let buyButtons = document.querySelectorAll('.products-list .cart-btn');
-    // Навішуємо обробник подій на кожну кнопку "Купити"
-     if (buyButtons) {
-     buyButtons.forEach(function (button) {
-     button.addEventListener('click', addToCart)
-     });
-     }
+    // // Отримуємо всі кнопки "Купити" на сторінці
+    // let buyButtons = document.querySelectorAll('.products-list .cart-btn');
+    // // Навішуємо обробник подій на кожну кнопку "Купити"
+    //  if (buyButtons) {
+    //  buyButtons.forEach(function (button) {
+    //  button.addEventListener('click', addToCart)
+    //  });
+    //  }
 })
 
 let team1 = document.querySelector('.team1')

@@ -3,7 +3,21 @@
         "tirle": "Тур Львів Париж",
         "description": "Львівський Хлопчик",
         "price": 499,
-        "inage" "paris.png"
+        "image": "greanparig.jpg"
+
+    },
+    {
+        "tirle": "Тур Львів Париж",
+        "description": "Львівський Хлопчик",
+        "price": 499,
+        "image": "paris.jpg"
+
+    },
+    {
+        "tirle": "Тур Львів Париж",
+        "description": "Львівський Хлопчик",
+        "price": 499,
+        "image": "paris.jpg"
 
     }
 

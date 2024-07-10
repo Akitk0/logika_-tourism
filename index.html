@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Galaxy</title>
     <script src='https://kit.fontawesome.com/f77600b8df.js' crossorigin='anonymous'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav>
-        <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">Проєкт</div>
-        <div class='nav-item' onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'});">Команда</div>
-        <div class='nav-item' onclick="document.getElementById('rules').scrollIntoView({behavior: 'smooth'});">Правила</div>
-        <div class='nav-item' onclick="document.getElementById('submit').scrollIntoView({behavior: 'smooth'});">Заявка</div>
+        <div class='nav-item' onclick="document.getElementById('submit').scrollIntoView({ behavior: 'smooth' });">Заявка
+        </div>
+        <div class='nav-item' onclick="document.getElementById('team').scrollIntoView({ behavior: 'smooth' });">Команда
+        </div>
+        <div class='nav-item' onclick="document.getElementById('rules').scrollIntoView({ behavior: 'smooth' });">Правила
+        </div>
+        <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">Проєкт
+        </div>
     </nav>
     <header>
         <h1>Вирушаєм в <span class='mars mars1'>Дорогу</span></h1>
-        <div class='arrow-next'><i class='fa-solid fa-arrow-down'></i></div>
+        <div class='arrow-next' onclick="scrollDown()"><i class='fa-solid fa-arrow-down'></i></div>
     </header>
     <main>
-        <section class='section1' id='about'>
-            <h1>Про проєкт</h1>
-            <div class='about-wrapper'>
-                <p>Вітаємо гостей інтернет сайту туристичного агентства “Танго Тревел”!</p>
-                <p>Наша компанія — відомий український туроператор. Наша основна спеціальність — організація подорожей Україною, а також по країнах Європи та Америки.</p>
-                <p>Ми робимо все можливе, щоб ваша подорож була організована бездоганно, і ви змогли побачити все саме найцікавіше, ознайомитись з архітектурними пам'ятками, культурою, відомими локаціями різних країн та добре відпочити від буденних проблем.</p>
-                <p><b>Правила бронювання туру</b></p>
-                <p>Для бронювання туру:</p>
-                <ul>
-                    <li>оберіть оптимальну програму, що вам до смаку, в каталозі в розділі Тури;</li>
-                    <li>створіть акаунт на сайті — зареєструйтеся, внесіть особисті дані та замовте подорож.</li>
-                </ul>
-                <p>Або</p>
-                <p>Замовте програму подорожі в свого улюбленого туристичного агента.</p>
-                <p><b>Бонуси та постійні знижки від "Танго Тревел"</b></p>
-                <p>Маємо спеціальний бонус для іменинників. Якщо ваш День народження припадає на дату подорожі, ми готові подарувати вам омріяний тур. Єдина умова — запросити з собою 5 друзів. А ще іменинників чекають додаткові приємні сувеніри, а також грошовий подарунковий сертифікат (його сума становить 10€).</p>
-                <p>Супер-знижка для компаній. Якщо ви подорожуєте групою з 5 чи більше осіб, можете прийняти участь в акції 5+.</p>
-                <p>Також Танго Тревел пропонує чудові знижки для груп, ознайомитися з ними та правилами групового бронювання можна ТУТ.</p>
+        <section class='container py-5' id='submit'>
+            <h1>Наші тури</h1>
+            <div class="tours pt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                    <img src="img/paris.jpg" class="card-img-bottom" alt="Paris">
+                </div>
+                <!-- Example for adding more tours -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Another tour</h5>
+                        <p class="card-text">Description of another tour. More details to be added here.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 5 mins ago</small></p>
+                    </div>
+                    <img src="img/another-tour.jpg" class="card-img-bottom" alt="Another tour">
+                </div>
             </div>
         </section>
-        <section class='section2' id='team'>
+        <section class='container py-5' id='team'>
             <h1>Команда</h1>
-            <div class='team-wrapper'>
+            <div class='team-wrapper my-5'>
                 <div class='team-item team1'>
                     <div class='team-item-top'></div>
                     <div class='team-item-bottom'>
                         <h2>Віктор</h2>
-                        <p>Директор туристичної компанії. За плечима десятки успішних подорожей і згуртована команда професіоналів.</p>
+                        <p>Директор туристичної компанії. За плечима десятки успішних подорожей і згуртована команда
+                            професіоналів.</p>
                     </div>
                 </div>
                 <div class='team-item team2'>
@@ -66,34 +78,49 @@
                 </div>
             </div>
         </section>
-        <section class='section3' id='rules'>
+        <section class='section1' id='about'>
+            <div class='container about-wrapper py-5'>
+                <h1 class="my-5">Про проєкт</h1>
+                <p>Вітаємо гостей інтернет сайту туристичного агентства “Танго Тревел”!</p>
+                <p>Наша компанія — відомий український туроператор. Наша основна спеціальність — організація подорожей
+                    Україною, а також по країнах Європи та Америки.</p>
+                <p>Ми робимо все можливе, щоб ваша подорож була організована бездоганно, і ви змогли побачити все саме
+                    найцікавіше, ознайомитись з архітектурними пам'ятками, культурою, відомими локаціями різних країн та
+                    добре відпочити від буденних проблем.</p>
+                <p><b>Правила бронювання туру</b></p>
+                <p>Для бронювання туру:</p>
+                <ul>
+                    <li>оберіть оптимальну програму, що вам до смаку, в каталозі в розділі Тури;</li>
+                    <li>створіть акаунт на сайті — зареєструйтеся, внесіть особисті дані та замовте подорож.</li>
+                </ul>
+                <p>Або</p>
+                <p>Замовте програму подорожі в свого улюбленого туристичного агента.</p>
+                <p><b>Бонуси та постійні знижки від "Танго Тревел"</b></p>
+                <p>Маємо спеціальний бонус для іменинників. Якщо ваш День народження припадає на дату подорожі, ми
+                    готові подарувати вам омріяний тур. Єдина умова — запросити з собою 5 друзів. А ще іменинників
+                    чекають додаткові приємні сувеніри, а також грошовий подарунковий сертифікат (його сума становить
+                    10€).</p>
+                <p>Супер-знижка для компаній. Якщо ви подорожуєте групою з 5 чи більше осіб, можете прийняти участь в
+                    акції 5+.</p>
+                <p>Також Танго Тревел пропонує чудові знижки для груп, ознайомитися з ними та правилами групового
+                    бронювання можна ТУТ.</p>
+            </div>
+        </section>
+        <section class='container py-5' id='rules'>
             <h1>Правила</h1>
             <div class='rules-wrapper'>
                 <p>Будь ласка, ознайомтеся з нашими правилами перед подорожжю:</p>
-                <p><b>Правило 1:</b> Дотримуйтесь вказівок нашої команди, щоб забезпечити безпеку та комфорт для всіх учасників.</p>
-                <p><b>Правило 2:</b> Поважайте місцеві традиції та звичаї, щоб зробити вашу подорож приємнішою та культурно збагачуючою.</p>
-                <p><b>Правило 3:</b> Завжди майте при собі документи, зокрема паспорт та візу (якщо необхідно), для ідентифікації особи.</p>
-            </div>
-        </section>
-        <section class='section4' id='submit'>
-            <h1>Заявка</h1>
-            <div class='submit-wrapper'>
-                <form action="/submit_form" method="POST">
-                    <label for="name">Ім'я:</label>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="tour">Тур:</label>
-                    <select id="tour" name="tour" required>
-                        <option value="tour1">Тур 1</option>
-                        <option value="tour2">Тур 2</option>
-                        <option value="tour3">Тур 3</option>
-                    </select><br>
-                    <input type="submit" value="Надіслати">
-                </form>
+                <p><b>Правило 1:</b> Дотримуйтесь вказівок нашої команди, щоб забезпечити безпеку та комфорт для всіх
+                    учасників.</p>
+                <p><b>Правило 2:</b> Поважайте місцеві традиції та звичаї, щоб зробити вашу подорож приємнішою та
+                    культурно збагачуючою.</p>
+                <p><b>Правило 3:</b> Завжди майте при собі документи, зокрема паспорт та візу (якщо необхідно), для
+                    ідентифікації особи.</p>
             </div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
     <script src="js/script.js"></script>
-</body>
-</html>
+    <script>
