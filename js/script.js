@@ -7,12 +7,18 @@ async function getProducts() {
     // Повертаємо отримані продукти
     return products
 };
-function getCardHTML(item){
-    return `<div class="card">
+function getCardHTML(item) {
+    return `<div class="card my-3">
                     <div class="card-body">
                         <h5 class="card-title">${item.title}</h5>
                         <p class="card-text">${item.description}</p>
                         <h5>${item.price}$</h5>
+                        <button class="order-btn my-3" data-tour= '${JSON.stringify(item)}'data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="shadow"></span>
+                            <span class="edge"></span>
+                            <span class="front text"> Забронювати
+                            </span>
+                        </button>
                     </div>
                     <img src="img/${item.image}" class="card-img-bottom" alt="...">
                 </div>`
@@ -22,7 +28,7 @@ function getCardHTML(item){
 // Викликаємо асинхронну функцію та очікуємо на отримання продуктів
 getProducts().then(function (products) {
     let productsList = document.querySelector('.tours')
-    productsList.innerHTML=''
+    productsList.innerHTML = ''
     if (productsList) {
         products.forEach(function (product) {
             // Відображаємо товари на сторінці
@@ -50,3 +56,4 @@ function scrollDown() {
     window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
 }
 let button = document.querySelector('.arrow-next')
+
