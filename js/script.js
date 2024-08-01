@@ -13,7 +13,7 @@ function getCardHTML(item) {
                         <h5 class="card-title">${item.title}</h5>
                         <p class="card-text">${item.description}</p>
                         <h5>${item.price}$</h5>
-                        <button class="order-btn my-3" data-tour= '${JSON.stringify(item)}'data-bs-toggle="modal" data-bs-target="#exampleModal">
+                         <button class="order-btn my-3" data-tour= '${JSON.stringify(item)}' data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <span class="shadow"></span>
                             <span class="edge"></span>
                             <span class="front text"> Забронювати
@@ -26,6 +26,36 @@ function getCardHTML(item) {
 
 }
 // Викликаємо асинхронну функцію та очікуємо на отримання продуктів
+function bookTour(event) {
+    let tourData = event.target.getAttribute('data-tour')
+    let tour = JSON.parse(tourData)
+
+}
+const exampleModal = document.getElementById('exampleModal')
+if (exampleModal) {
+    exampleModal.addEventListener('show.bs.modal', event => {
+        // Button that triggered the modal
+        const button = event.relatedTarget
+        // Extract info from data-bs-* attributes
+        let tourData = button.getAttribute('data-tour')
+        let tour = JSON.parse(tourData)
+        // If necessary, you could initiate an Ajax request here
+        // and then do the updating in a callback.
+
+        // Update the modal's content.
+        let title = exampleModal.querySelector('.tour-title')
+        let date = exampleModal.querySelector('.tour-date')
+        let description = exampleModal.querySelector('.tour-description')
+        let price = exampleModal.querySelector('.tour-price')
+
+        title.innerHTML = tour.title
+        date.innerHTML = tour.date
+        description.innerHTML = tour.description
+        price.innerHTML = tour.price + `$`
+
+    })
+}
+
 getProducts().then(function (products) {
     let productsList = document.querySelector('.tours')
     productsList.innerHTML = ''
